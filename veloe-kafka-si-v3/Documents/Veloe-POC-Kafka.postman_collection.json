@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "a845e520-8227-4c0f-85f6-48214065f72a",
+		"name": "Veloe-POC-Kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7070/kafka/producer/estab-coml",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Server-Broker",
+						"value": "127.0.0.1:29092",
+						"type": "text"
+					},
+					{
+						"key": "Server-Register",
+						"value": "http://127.0.0.1:8081",
+						"type": "text"
+					},
+					{
+						"key": "Topic",
+						"value": "siestabcoml",
+						"type": "text"
+					},
+					{
+						"key": "Group-Id",
+						"value": "GroupEstabComl",
+						"type": "text"
+					},
+					{
+						"key": "Partition",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEcGrupo\" : \"2\",\r\n\t\"idEc\" : \"1\",\r\n\t\"tipoEc\" : \"artesp\",\r\n\t\"dataAlteracao\" : \"2019-03-29T06:01:23Z\",\r\n\t\"liberado\" : \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/kafka/producer/estab-coml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"kafka",
+						"producer",
+						"estab-coml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7070/kafka/producer/identificador",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "v2x5d7ae715cab7034e39a8241fbe2e9b0ed3baca9a172e7b52639e3b8e8da9e62b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Server-Broker",
+						"type": "text",
+						"value": "127.0.0.1:29092"
+					},
+					{
+						"key": "Server-Register",
+						"type": "text",
+						"value": "http://127.0.0.1:8081"
+					},
+					{
+						"key": "Topic",
+						"type": "text",
+						"value": "siidentificador"
+					},
+					{
+						"key": "Group-Id",
+						"value": "GroupIdentificador",
+						"type": "text"
+					},
+					{
+						"key": "Partition",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idIdent\" : \"0\",\n\t\"idEcGrupo\" : \"2\",\n\t\"tipoIdent\" : \"tag\",\n\t\"dataAlteracao\" : \"\",\n    \"placa\": \"AAA1111\",\n    \"ativo\": \"true\",\n    \"bloqTemp\" : \"false\",\n\t\"bloqSaldo\" : \"false\"\n}\n",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/kafka/producer/identificador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"kafka",
+						"producer",
+						"identificador"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

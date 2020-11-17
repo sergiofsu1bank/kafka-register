@@ -1,0 +1,15 @@
+{
+  "namespace": "io.confluent.developer",
+  "type": "record",
+  "name": "IdentificadorDto",
+  "fields": [
+    {"name": "idIdent", "type": "string", "avro.java.string": "String"},
+    {"name": "idEcGrupo","type": "string","avro.java.string": "String"},
+    {"name": "tipoIdent","type": "string","avro.java.string": "String"},
+    {"name": "dataAlteracao","type": "string","avro.java.string": "String"},
+    {"name": "placa","type": "string","avro.java.string": "String"},
+    {"name": "ativo","type": "string","avro.java.string": "String"},
+    {"name": "bloqTemp","type": "string","avro.java.string": "String"},
+    {"name": "bloqSaldo","type": "string","avro.java.string": "String"}
+  ]
+}

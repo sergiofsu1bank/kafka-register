@@ -1,0 +1,12 @@
+{
+  "namespace": "io.confluent.developer",
+  "type": "record",
+  "name": "EstabComlDto",
+  "fields": [
+    {"name": "idEcGrupo","type": "string","avro.java.string": "String"},
+    {"name": "idEc","type": "string","avro.java.string": "String"},
+    {"name": "tipoEc","type": "string","avro.java.string": "String"},
+    {"name": "dataAlteracao","type": "string","avro.java.string": "String"},
+    {"name": "liberado","type": "string","avro.java.string": "String"}
+  ]
+}
